@@ -11,15 +11,17 @@ This project focuses on analyzing road safety data to identify trends, patterns,
 1. **Install Miniconda**: Ensure you have Miniconda installed on your system.
  
 2. **Create a Conda Environment**:
+   **Creating env in miniconda folder.**
    ```bash
    conda create -n my_project_env python=3.9
+   Activate the env.
    conda activate my_project_env
    ```
 3. **Install Required Libraries**:
    Install the following libraries:
    ```bash
    conda install pandas numpy matplotlib seaborn
-   conda install jupyter  # Optional, for interactive analysis
+   conda install jupyter 
    ```
 
 4. **Export Environment**:
@@ -28,18 +30,6 @@ This project focuses on analyzing road safety data to identify trends, patterns,
    conda env export > environment.yml
    ```
 ---
-
-### Project Structure
-The project is organized as follows:
-```
-project_folder/
-├── data/             # Raw and processed datasets
-├── notebooks/        # Jupyter Notebooks for exploratory analysis
-├── scripts/          # Python scripts for reusable logic
-├── outputs/          # Graphs, results, and visualizations
-├── environment.yml   # Conda environment configuration
-└── README.md         # Project description and setup instructions
-```
 
 ---
 
@@ -54,25 +44,6 @@ project_folder/
 4. Select the Conda environment as the interpreter (via Command Palette: `Python: Select Interpreter`).
 5. Run scripts or open notebooks to start analyzing data.
 
----
-
-## Example Script
-Here’s an example script for basic data exploration:
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Load data
-data = pd.read_csv('data/your_dataset.csv')
-
-# Plot accidents by day of the week
-accidents_by_day = data['YOM_BASHAVUA'].value_counts()
-accidents_by_day.sort_index().plot(kind='bar')
-plt.xlabel('Day of the Week')
-plt.ylabel('Number of Accidents')
-plt.title('Accidents by Day of the Week')
-plt.show()
-```
 
 ---
 
@@ -82,22 +53,11 @@ plt.show()
    conda env create -f environment.yml
    ```
 2. Use Git for version control and collaboration.
----
-
-## Dependencies
-- Python 3.9
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- jupyter (optional)
 
 ---
 ## By me
 - check for the env name :
 conda info --envs
-
--
 
 
 
