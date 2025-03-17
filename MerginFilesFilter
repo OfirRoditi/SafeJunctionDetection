@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Define the file paths
+merged_file = "C:\\Users\\ofirr\\Desktop\\3-Year\\FinalProject\\Project\\Data\\Merged_Accident_Data.csv"
+filtered_output_file = "C:\\Users\\ofirr\\Desktop\\3-Year\\FinalProject\\Project\\Data\\Filtered_Urban_Accidents.csv"
+
+# Load the merged dataset
+print("Loading merged data...")
+merged_df = pd.read_csv(merged_file, encoding="utf-8")
+print(f"Original dataset contains {merged_df.shape[0]} rows and {merged_df.shape[1]} columns.")
+
+# Check the unique values in SUG_DEREH
+print("\nAccident distribution by road type (SUG_DEREH):")
+print(merged_df["SUG_DEREH"].value_counts())
+
+# Filter only urban intersections (SUG_DEREH == 1)
+filtered_df = merged_df[merged_df["SUG_DEREH"] == 1]
+print(f"\nRemaining rows after filtering: {filtered_df.shape[0]}")
+
+# Save the filtered dataset
+filtered_df.to_csv(filtered_output_file, index=False, encoding="utf-8")
+print(f"\n✅ Filtered dataset saved as: {filtered_output_file}")
