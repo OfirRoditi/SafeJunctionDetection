@@ -1,0 +1,9 @@
+﻿Reason,Description,Type,Feature
+Younger drivers statistically have higher accident rates,Driver's age in years,Numeric,age
+More experience often means safer driving,Years of driving experience,Numeric,experience_years
+Indicates potential driving risk,Number of past accidents or violations,Numeric,accident_history(?)
+More exposure increases risk probability,Kilometers driven per week,Numeric,average_km_per_year
+Higher speeds increase accident severity,Driver's likelihood to speed,Categorical,speeding_tendency(?)
+Some studies show gender-based risk trends,Gender identity of the driver,Categorical,gender
+Impacts training and vehicle type,"License type (B, A, C1, etc.)",Categorical,driving_license_type
+Professionals have more exposure but often better training,"Drives professionally (e.g., taxi, delivery)",Boolean,is_professional_driver
